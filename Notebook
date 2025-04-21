@@ -1,0 +1,1206 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Revisão de código \n",
+    "\n",
+    "Olá! \n",
+    "\n",
+    "Meu nome é Suelen. Estou feliz em revisar seu projeto hoje!\n",
+    "\n",
+    "Quando vejo um erro pela primeira vez, apenas aponto. Deixarei você encontrá-lo e corrigi-lo sozinho. Além disso, ao longo do texto, farei algumas observações sobre melhorias no código e também farei comentários sobre suas percepções sobre o assunto. Mas se você ainda não consegue lidar com essa tarefa, darei uma dica mais precisa na próxima iteração e também alguns exemplos práticos. Estarei aberto a feedbacks e discussões sobre o tema.\n",
+    "\n",
+    "Você pode encontrar meus comentários em caixas verdes, amarelas ou vermelhas como estas:\n",
+    "\n",
+    "\n",
+    "<div class=\"alert alert-block alert-success\">\n",
+    "<b>Comentário: </b> <a class=\"tocSkip\"></a>\n",
+    "\n",
+    "Sucesso. Tudo está correto.\n",
+    "</div>\n",
+    "\n",
+    "<div class=\"alert alert-block alert-warning\">\n",
+    "<b>Comentário: </b> <a class=\"tocSkip\"></a>\n",
+    "\n",
+    "Observações. Algumas recomendações.\n",
+    "</div>\n",
+    "\n",
+    "<div class=\"alert alert-block alert-danger\">\n",
+    "\n",
+    "<b>Comentário: </b> <a class=\"tocSkip\"></a>\n",
+    "\n",
+    "O bloco requer algumas correções. O trabalho não pode ser aceito com os comentários vermelhos.\n",
+    "</div>\n",
+    "\n",
+    "Você pode me responder usando isto:\n",
+    "\n",
+    "<div class=\"alert alert-block alert-info\">\n",
+    "<b>Resposta do aluno</b> <a class=\"tocSkip\"></a>\n",
+    "</div>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-danger\">\n",
+    "\n",
+    "<b>Comentário: </b> <a class=\"tocSkip\"></a>\n",
+    "\n",
+    "Parabéns pela conclusão da tarefa, Alessandra! 🚀👏 A maioria das tarefas foi executada perfeitamente, muito bem!\n",
+    "\n",
+    "Precisamos fazer alguns ajustes para prosseguir com a aprovação do projeto. Já deixei comentários no código para ajudar você nesses ajustes.\n",
+    "\n",
+    "Estou à disposição para esclarecer quaisquer dúvidas que surgirem.\n",
+    "\n",
+    "Boa sorte! 🍀\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "FnPB8Fx5TMRb"
+   },
+   "source": [
+    "Uma empresa de comércio eletrônico, Store 1, começou recentemente a coletar dados sobre seus clientes. O objetivo da Store 1 é entender melhor o comportamento dos clientes e tomar decisões baseadas em dados para melhorar experiência online deles.\n",
+    "\n",
+    "Como parte da equipe analítica, sua primeira tarefa é avaliar a qualidade de uma amostra de dados coletados e preparar elas para análises futuras."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "vLW81iYmTMRe"
+   },
+   "source": [
+    "# Quiz\n",
+    "\n",
+    "A Store 1 visa garantir a consistência na coleta de dados. Como parte desse esforço, a qualidade dos dados coletados sobre os usuários precisa ser avaliada. Foi pedido que você revise os dados coletados e proponha alterações. Abaixo, você verá dados sobre um determinado usuário. Revise os dados e identifique possíveis problemas."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "id": "i7_O27ZRTMRe"
+   },
+   "outputs": [],
+   "source": [
+    "user_id = '32415'\n",
+    "user_name = ' mike_reed '\n",
+    "user_age = 32.0\n",
+    "fav_categories = ['ELECTRONICS', 'SPORT', 'BOOKS']"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "Dyjbn7MhTMRg"
+   },
+   "source": [
+    "**Opções:**\n",
+    "\n",
+    "1. O tipo de dados de `user_id` deve ser alterado de string para número inteiro (integer).\n",
+    "    \n",
+    "2. A variável `user_name` contém uma string com espaçamento desnecessário e um sublinhado entre o nome e o sobrenome.\n",
+    "    \n",
+    "3. O tipo de dados de `user_age` está incorreto.\n",
+    "    \n",
+    "4. A lista `fav_categories` contém strings em letras maiúsculas. Em vez disso, devemos converter os valores da lista para letras minúsculas."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "AIsnk-vCTMRg"
+   },
+   "source": [
+    "Escreva na célula Markdown abaixo o número de opções que você identificou como problemas. Se você identificou vários problemas, separe o número por vírgulas. Por exemplo, se você acha que os números 1 e 3 estão incorretos, escreva 1, 3, e explique o motivo."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "70wSe_MjTMRh"
+   },
+   "source": [
+    "1,2,3 - 1: o valor não deveria estar entre aspas, já que deve ser um número inteiro; 2: a variável contém uma string com espaçamento antes e no final do nome, devendo ser usado o método strip para remover; 3: o tipo de dados do usser_age está com o tipo float, devendo ser alterado para inteiro, já que se trata da idade do cliente.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-success\">\n",
+    "<b>Comentário: </b> <a class=\"tocSkip\"></a>\n",
+    "\n",
+    "Concordo com a sua resposta e raciocínio.\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "IH19D6NiTMRh"
+   },
+   "source": [
+    "# Tarefa 1\n",
+    "\n",
+    "Vamos implementar as mudanças que identificamos. Primeiro, queremos corrigir os problemas com a variável `user_name`. Como verificamos, ela possui espaços desnecessários e um sublinhado como separador entre o nome e o sobrenome. Seu objetivo é remover os espaços e depois substituir o sublinhado por espaço."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "id": "HxZLfyLeTMRh"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "mike reed\n"
+     ]
+    }
+   ],
+   "source": [
+    "user_name = ' mike_reed '\n",
+    "user_name = user_name.strip() # remova os espaços na string original\n",
+    "user_name = user_name.replace(\"_\",\" \") # substitua o sublinhado por espaço\n",
+    "\n",
+    "print(user_name)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "LYGHRijzTMRi"
+   },
+   "source": [
+    "# Tarefa 2\n",
+    "\n",
+    "Em seguida, precisamos dividir o `user_name` atualizado em duas substrings para obter uma lista que contém dois valores: a string para o nome e a string para o sobrenome."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "id": "NOErvTX0TMRi"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['mike', 'reed']\n"
+     ]
+    }
+   ],
+   "source": [
+    "user_name = 'mike reed'\n",
+    "name_split = user_name.split() # divida a string user_name aqui\n",
+    "\n",
+    "print(name_split)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "9uRRxzLlTMRj"
+   },
+   "source": [
+    "# Tarefa 3\n",
+    "\n",
+    "Ótimo! Agora queremos trabalhar com a variável `user_age`. Como mencionamos antes, ela possui um tipo de dados incorretos. Vamos corrigir esse problema transformando o tipo de dados e imprimindo o resultado final."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "id": "j9TH2Z4dTMRk"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "32\n"
+     ]
+    }
+   ],
+   "source": [
+    "user_age = 32.0\n",
+    "user_age = int(user_age) # altere o tipo de dados da idade de um usuário\n",
+    "\n",
+    "print(user_age)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "pAjBZI5_TMRk"
+   },
+   "source": [
+    "# Tarefa 4\n",
+    "\n",
+    "Como sabemos, os dados nem sempre são perfeitos. Temos que considerar cenários em que o valor de `user_age` não pode ser convertido em um número inteiro. Para evitar que nosso sistema falhe, devemos tomar medidas com antecedência.\n",
+    "\n",
+    "Escreva um código que tenta converter a variável `user_age` em um número inteiro e atribua o valor transformado a `user_age_int`. Se a tentativa falhar, vamos exibir uma mensagem solicitando que o usuário forneça sua idade como um valor numérico com a mensagem: `Forneça sua idade como um valor numérico.`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "id": "rB6ggdMXTMRl"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Forneça sua idade com um valor numérico.\n"
+     ]
+    }
+   ],
+   "source": [
+    "user_age = 'thirty two' # esta é a variável que armazena a idade como uma string.\n",
+    "\n",
+    "try:\n",
+    "    user_age_int = int(user_age) \n",
+    "    print(user_age_int) \n",
+    "except:\n",
+    "    print('Forneça sua idade com um valor numérico.') #escreva um código que vai tentar transformar user_age em um número inteiro e, se falhar, vai imprimir a mensagem especificada"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-warning\">\n",
+    "<b>Comentário: </b> <a class=\"tocSkip\"></a>\n",
+    "\n",
+    "Aqui é recomendado utiliar os comandos `try` e `except`. Exemplo: \n",
+    "\n",
+    "```python \n",
+    "\n",
+    "user_age = 'thirty two' # esta é a variável que armazena a idade como uma string.\n",
+    "\n",
+    "try:\n",
+    "    user_age_int = int(user_age)\n",
+    "    print(user_age_int)\n",
+    "except:\n",
+    "    print('Forneça sua idade com um valor numérico.')\n",
+    "\n",
+    "```\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "mRiGSPmOTMRl"
+   },
+   "source": [
+    "# Tarefa 5\n",
+    "\n",
+    "Por fim, observe que todas as categorias de favoritos são armazenadas em letras maiúsculas. Para preencher uma nova lista chamada `fav_categories_low` com as mesmas categorias, mas em letras minúsculas, repita os valores na lista `fav_categories`, os modifique e anexe os novos valores à lista `fav_categories_low`. Como sempre, imprima o resultado final."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {
+    "id": "WpeCezPvTMRl"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "electronics,sport,books\n"
+     ]
+    }
+   ],
+   "source": [
+    "fav_categories = ['ELECTRONICS', 'SPORT', 'BOOKS']\n",
+    "fav_categories_low = ','.join(fav_categories)\n",
+    "\n",
+    "fav_categories_low = fav_categories_low.lower() # escreva seu código aqui\n",
+    "\n",
+    "# não remova a instrução de impressão abaixo\n",
+    "print(fav_categories_low)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "wtdhH2U3TMRm"
+   },
+   "source": [
+    "# Tarefa 6\n",
+    "\n",
+    "Conseguimos informações adicionais sobre os hábitos de consumo de nossos usuários, incluindo o valor gasto em cada uma de suas categorias favoritas. A administração está interessada nas seguintes métricas:\n",
+    "\n",
+    "- Valor total gasto pelo usuário\n",
+    "- Valor mínimo gasto\n",
+    "- Valor máximo gasto\n",
+    "\n",
+    "Vamos calcular e imprimir esses valores:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {
+    "id": "FJrkCnPTTMRm"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1280\n",
+      "894\n",
+      "173\n"
+     ]
+    }
+   ],
+   "source": [
+    "fav_categories_low = ['electronics', 'sport', 'books']\n",
+    "spendings_per_category = [894, 213, 173]\n",
+    "\n",
+    "total_amount = sum(spendings_per_category) # escreva seu código aqui\n",
+    "max_amount = max(spendings_per_category) # escreva seu código aqui\n",
+    "min_amount = min(spendings_per_category) # escreva seu código aqui\n",
+    "\n",
+    "# não remova a instrução de impressão abaixo\n",
+    "print(total_amount)\n",
+    "print(max_amount)\n",
+    "print(min_amount)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "teiKWjy4TMRn"
+   },
+   "source": [
+    "# Tarefa 7\n",
+    "\n",
+    "A empresa quer oferecer descontos aos seus clientes fiéis. Clientes que fizerem compras totalizando mais de $1.500 são considerados fiéis e vão receber um desconto.\n",
+    "\n",
+    "Nosso objetivo é criar um ciclo `while` que verifique o valor total gasto e pare quando ele for atingido. Para simular novas compras, a variável `new_purchase` gera um número entre 30 e 80 em cada ciclo. Isso representa a quantidade de dinheiro gasto em uma nova compra, e é o que você precisa adicionar ao total.\n",
+    "\n",
+    "Assim que o valor alvo for atingido e o ciclo `while` for encerrado, o valor final será impresso."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {
+    "id": "HPvkbyzATMRn"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1534\n"
+     ]
+    }
+   ],
+   "source": [
+    "from random import randint\n",
+    "\n",
+    "total_amount_spent = 1280\n",
+    "target_amount = 1500\n",
+    "\n",
+    "while total_amount_spent < target_amount: # escreva seu código aqui\n",
+    "\tnew_purchase = randint(30, 80) # geramos um número aleatório de 30 a 80\n",
+    "\ttotal_amount_spent += new_purchase # escreva seu código aqui\n",
+    "\n",
+    "print(total_amount_spent)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "jwzs5Ad2TMRn"
+   },
+   "source": [
+    "# Tarefa 8\n",
+    "\n",
+    "Agora temos todas as informações sobre um cliente da maneira que queremos. A administração de uma empresa nos pediu para encontrar uma maneira de resumir toda a informação sobre um usuário. Seu objetivo é criar uma string formatada que usa informações das variáveis ​​`user_id`, `user_name` e `user_age`.\n",
+    "\n",
+    "Aqui está a string final que queremos criar: `Usuário 32415 chama-se mike e tem 32 anos.`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {
+    "id": "Da4RJ_gLTMRo"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "('32415', ['mike', 'reed'], 32)\n"
+     ]
+    }
+   ],
+   "source": [
+    "user_id = '32415'\n",
+    "user_name = ['mike', 'reed']\n",
+    "user_age = 32\n",
+    "\n",
+    "user_info = f\"{user_id,user_name,user_age}\" # escreva seu código aqui\n",
+    "\n",
+    "# não remova a instrução de impressão abaixo\n",
+    "print(user_info)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "DAfqUxKhTMRo"
+   },
+   "source": [
+    "Como você já deve saber, as empresas coletam e armazenam dados de uma maneira específica. A Store 1 deseja armazenar todas as informações sobre seus clientes em uma tabela.\n",
+    "\n",
+    "| user_id | user_name | user_age | purchase_category | spending_per_category |\n",
+    "| --- | --- | --- | --- | --- |\n",
+    "| '32415' | 'mike', 'reed' | 32 | 'electronics', 'sport', 'books' | 894, 213, 173 |\n",
+    "| '31980' | 'kate', 'morgan' | 24 | 'clothes', 'shoes' | 439, 390 |\n",
+    "\n",
+    "Em termos técnicos, uma tabela é simplesmente uma lista aninhada que possui uma sublista para cada usuário.\n",
+    "\n",
+    "A Store 1 criou essa tabela para seus usuários. Ela está armazenada na variável `users`. Cada sublista contém o ID do usuário, nome e sobrenome, idade, categorias favoritas e o valor gasto em cada categoria."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "ZAN1CrBGTMRp"
+   },
+   "source": [
+    "# Tarefa 9\n",
+    "\n",
+    "Para calcular a receita da empresa, siga estas etapas:\n",
+    "\n",
+    "1. Use um ciclo `for` para iterar na lista `users`.\n",
+    "2. Extraia a lista de gastos de cada usuário e some os valores.\n",
+    "3. Atualize o valor da receita com o total de cada usuário.\n",
+    "\n",
+    "Isso vai fornecer a receita total da empresa, que você vai imprimir no final."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "metadata": {
+    "id": "ehCh9ub0TMRp"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2109\n"
+     ]
+    }
+   ],
+   "source": [
+    "users = [\n",
+    "\t  # este é o começo da primeira sublista\n",
+    "    ['32415', ['mike', 'reed'], 32, ['electronics', 'sport', 'books'],\n",
+    "        [894, 213, 173]\n",
+    "    ], # este é o fim da primeira sublista\n",
+    "\n",
+    "    # este é o começo da segunda sublista\n",
+    "    ['31980', ['kate', 'morgan'], 24, ['clothes', 'shoes'],\n",
+    "        [439, 390]\n",
+    "    ] # este é o fim da segunda sublista\n",
+    "]\n",
+    "\n",
+    "revenue = 0\n",
+    "\n",
+    "for user in users:\n",
+    "\tspendings_list = user [4]     # extraia a lista de gastos para cada usuário e some os valores\n",
+    "\ttotal_spendings = sum(spendings_list) # some os gastos em todas as categorias para obter um total para um usuário específico\n",
+    "\trevenue += total_spendings # atualize a receita\n",
+    "\n",
+    "# não remova a instrução de impressão abaixo\n",
+    "print(revenue)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "sWwO-Qa1TMRp"
+   },
+   "source": [
+    "# Tarefa 10\n",
+    "\n",
+    "Use um ciclo for para percorrer a lista de usuários que fornecemos e imprima os nomes dos clientes com menos de 30 anos."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "id": "dRl-c6NvTMRq"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "['kate', 'morgan']\n",
+      "\n",
+      "\n",
+      "['samantha', 'smith']\n",
+      "\n",
+      "\n",
+      "['emily', 'brown']\n",
+      "\n",
+      "\n",
+      "['jose', 'martinez']\n",
+      "\n",
+      "\n",
+      "['james', 'lee']\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "users = [\n",
+    "    ['32415', ['mike', 'reed'], 32, ['electronics', 'sport', 'books'],\n",
+    "     [894, 213, 173]],\n",
+    "    ['31980', ['kate', 'morgan'], 24, ['clothes', 'books'], [439,\n",
+    "     390]],\n",
+    "    ['32156', ['john', 'doe'], 37, ['electronics', 'home', 'food'],\n",
+    "     [459, 120, 99]],\n",
+    "    ['32761', ['samantha', 'smith'], 29, ['clothes', 'electronics',\n",
+    "     'beauty'], [299, 679, 85]],\n",
+    "    ['32984', ['david', 'white'], 41, ['books', 'home', 'sport'], [234,\n",
+    "     329, 243]],\n",
+    "    ['33001', ['emily', 'brown'], 26, ['beauty', 'home', 'food'], [213,\n",
+    "     659, 79]],\n",
+    "    ['33767', ['maria', 'garcia'], 33, ['clothes', 'food', 'beauty'],\n",
+    "     [499, 189, 63]],\n",
+    "    ['33912', ['jose', 'martinez'], 22, ['sport', 'electronics', 'home'\n",
+    "     ], [259, 549, 109]],\n",
+    "    ['34009', ['lisa', 'wilson'], 35, ['home', 'books', 'clothes'],\n",
+    "     [329, 189, 329]],\n",
+    "    ['34278', ['james', 'lee'], 28, ['beauty', 'clothes', 'electronics'\n",
+    "     ], [189, 299, 579]],\n",
+    "    ]\n",
+    "\n",
+    "for user in users:\n",
+    "    if user[2]<= 30: # escreva seu código aqui\n",
+    "        print(user[1])\n",
+    "        \n",
+    "    print()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-danger\">\n",
+    "<b>Comentário: </b> <a class=\"tocSkip\"></a>\n",
+    "\n",
+    "A lógica do seu código está correta, porém você selecionou os usuários com idade maior que 30 anos em vez de menor. Apenas ajuste o operador de >= para < .\n",
+    "\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "zicEj6hhTMRq"
+   },
+   "source": [
+    "# Tarefa 11\n",
+    "\n",
+    "Vamos juntar as tarefas 9 e 10 e imprimir os nomes de usuários com menos de 30 anos com gastos totais acima de 1.000 dólares."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {
+    "id": "ubyQ0OzeTMRq"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['32761', ['samantha', 'smith'], 29, ['clothes', 'electronics', 'beauty'], [299, 679, 85]]\n",
+      "['34278', ['james', 'lee'], 28, ['beauty', 'clothes', 'electronics'], [189, 299, 579]]\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "users = [\n",
+    "    ['32415', ['mike', 'reed'], 32, ['electronics', 'sport', 'books'],\n",
+    "     [894, 213, 173]],\n",
+    "    ['31980', ['kate', 'morgan'], 24, ['clothes', 'books'], [439,\n",
+    "     390]],\n",
+    "    ['32156', ['john', 'doe'], 37, ['electronics', 'home', 'food'],\n",
+    "     [459, 120, 99]],\n",
+    "    ['32761', ['samantha', 'smith'], 29, ['clothes', 'electronics',\n",
+    "     'beauty'], [299, 679, 85]],\n",
+    "    ['32984', ['david', 'white'], 41, ['books', 'home', 'sport'], [234,\n",
+    "     329, 243]],\n",
+    "    ['33001', ['emily', 'brown'], 26, ['beauty', 'home', 'food'], [213,\n",
+    "     659, 79]],\n",
+    "    ['33767', ['maria', 'garcia'], 33, ['clothes', 'food', 'beauty'],\n",
+    "     [499, 189, 63]],\n",
+    "    ['33912', ['jose', 'martinez'], 22, ['sport', 'electronics', 'home'\n",
+    "     ], [259, 549, 109]],\n",
+    "    ['34009', ['lisa', 'wilson'], 35, ['home', 'books', 'clothes'],\n",
+    "     [329, 189, 329]],\n",
+    "    ['34278', ['james', 'lee'], 28, ['beauty', 'clothes', 'electronics'\n",
+    "     ], [189, 299, 579]],\n",
+    "    ]\n",
+    "\n",
+    "\n",
+    "for user in users:\n",
+    "    if user [2]<=30 and sum(user[4])>=1000: # escreva seu código aqui\n",
+    "        print(user)\n",
+    "        \n",
+    "print()# escreva seu código aqui"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "kQX82mWVTMRr"
+   },
+   "source": [
+    "# Tarefa 12\n",
+    "\n",
+    "Agora vamos imprimir o nome e a idade de todos os usuários que compraram roupas (clothes). Imprima o nome e a idade na mesma instrução de impressão."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {
+    "id": "obZTnKq2TMRr"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['kate', 'morgan'] 24\n",
+      "['samantha', 'smith'] 29\n",
+      "['maria', 'garcia'] 33\n",
+      "['lisa', 'wilson'] 35\n",
+      "['james', 'lee'] 28\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "users = [\n",
+    "    ['32415', ['mike', 'reed'], 32, ['electronics', 'sport', 'books'],\n",
+    "     [894, 213, 173]],\n",
+    "    ['31980', ['kate', 'morgan'], 24, ['clothes', 'books'], [439,\n",
+    "     390]],\n",
+    "    ['32156', ['john', 'doe'], 37, ['electronics', 'home', 'food'],\n",
+    "     [459, 120, 99]],\n",
+    "    ['32761', ['samantha', 'smith'], 29, ['clothes', 'electronics',\n",
+    "     'beauty'], [299, 679, 85]],\n",
+    "    ['32984', ['david', 'white'], 41, ['books', 'home', 'sport'], [234,\n",
+    "     329, 243]],\n",
+    "    ['33001', ['emily', 'brown'], 26, ['beauty', 'home', 'food'], [213,\n",
+    "     659, 79]],\n",
+    "    ['33767', ['maria', 'garcia'], 33, ['clothes', 'food', 'beauty'],\n",
+    "     [499, 189, 63]],\n",
+    "    ['33912', ['jose', 'martinez'], 22, ['sport', 'electronics', 'home'\n",
+    "     ], [259, 549, 109]],\n",
+    "    ['34009', ['lisa', 'wilson'], 35, ['home', 'books', 'clothes'],\n",
+    "     [329, 189, 329]],\n",
+    "    ['34278', ['james', 'lee'], 28, ['beauty', 'clothes', 'electronics'\n",
+    "     ], [189, 299, 579]],\n",
+    "    ]\n",
+    "\n",
+    "for user in users:\n",
+    "    if 'clothes' in user [3]: # escreva seu código aqui\n",
+    "        print(user[1], user[2]) \n",
+    "            \n",
+    "print()      \n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-danger\">\n",
+    "<b>Comentário: </b> <a class=\"tocSkip\"></a>\n",
+    "\n",
+    "Aqui não é necessário adicionar os filtros de idade menor de 30 ou valores acima de 1000. Apenas é necessário filtrar os usuários que compraram roupas. \n",
+    "O output esperado é o seguinte: \n",
+    "    \n",
+    "```python \n",
+    "['kate', 'morgan'] 24\n",
+    "['samantha', 'smith'] 29\n",
+    "['maria', 'garcia'] 33\n",
+    "['lisa', 'wilson'] 35\n",
+    "['james', 'lee'] 28\n",
+    "```\n",
+    "\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "JJaO-qysTMRs"
+   },
+   "source": [
+    "#Escreva quaisquer comentários ou ideias finais aqui"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Na tarefa 11 e 12 não consigo ver o print por aqui, mas no Colab não apresentou erro, apesar que entendo que deveria vir apenas o nome dos usuários e não a lista toda e não sei como fazer."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-danger\">\n",
+    "<b>Comentário: </b> <a class=\"tocSkip\"></a>\n",
+    "\n",
+    "Oi, Alessandra! Respondendo sua pergunta: As vezes o output entre o colab e o jupyter noteebok apresentam divergências de performance mesmo, é normal. \n",
+    "    \n",
+    "Quanto à solução do exercício, você pode filtrar os elementos da lista dessa forma: \n",
+    "```python\n",
+    "#Código irá exibir o nome[1] e idade do usuário[2] \n",
+    "print(user[1], user[2]) \n",
+    "```\n",
+    "\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Obrigada pela ajuda Suelen. Percebo que muitas vezes não sabemos entender o enunciado ou não prestamos atenção aos detalhes. Na Tarefa 4 por que ele não trouxe o valor inteiro como número 32? \n",
+    "Na Tarefa 12, eu usei a opção abaixo, porém no resultado não aparece nada, então tentei de outra forma e deu certo, porém queria entender porque não rodou minha primeira opção abaixo. Obrigada. \n",
+    "for user in users:\n",
+    "    if user[3]=='clothes': # escreva seu código aqui\n",
+    "         print(user[1], user[2]) \n",
+    "            \n",
+    "print()                         \n",
+    "    "
+   ]
+  }
+ ],
+ "metadata": {
+  "ExecuteTimeLog": [
+   {
+    "duration": 11,
+    "start_time": "2024-07-14T14:03:26.056Z"
+   },
+   {
+    "duration": 5,
+    "start_time": "2024-07-14T14:03:40.343Z"
+   },
+   {
+    "duration": 5,
+    "start_time": "2024-07-14T14:03:50.056Z"
+   },
+   {
+    "duration": 351,
+    "start_time": "2024-07-14T14:04:15.836Z"
+   },
+   {
+    "duration": 9,
+    "start_time": "2024-07-14T14:08:00.237Z"
+   },
+   {
+    "duration": 25,
+    "start_time": "2024-07-14T14:08:26.553Z"
+   },
+   {
+    "duration": 6,
+    "start_time": "2024-07-14T14:09:12.537Z"
+   },
+   {
+    "duration": 45,
+    "start_time": "2024-07-14T14:09:37.900Z"
+   },
+   {
+    "duration": 24,
+    "start_time": "2024-07-14T14:09:43.361Z"
+   },
+   {
+    "duration": 11,
+    "start_time": "2024-07-14T14:09:48.817Z"
+   },
+   {
+    "duration": 28,
+    "start_time": "2024-07-14T14:10:06.333Z"
+   },
+   {
+    "duration": 5,
+    "start_time": "2024-07-14T14:10:15.495Z"
+   },
+   {
+    "duration": 5,
+    "start_time": "2024-07-14T14:10:33.481Z"
+   },
+   {
+    "duration": 31,
+    "start_time": "2024-07-14T14:14:07.529Z"
+   },
+   {
+    "duration": 6,
+    "start_time": "2024-07-14T14:19:36.565Z"
+   },
+   {
+    "duration": 5,
+    "start_time": "2024-07-14T14:35:34.284Z"
+   },
+   {
+    "duration": 9,
+    "start_time": "2024-07-14T14:40:26.299Z"
+   },
+   {
+    "duration": 6,
+    "start_time": "2024-07-14T14:40:39.188Z"
+   },
+   {
+    "duration": 6,
+    "start_time": "2024-07-14T14:42:32.736Z"
+   },
+   {
+    "duration": 37,
+    "start_time": "2024-07-14T14:57:42.187Z"
+   },
+   {
+    "duration": 69,
+    "start_time": "2024-07-14T15:06:11.404Z"
+   },
+   {
+    "duration": 33,
+    "start_time": "2024-07-14T15:06:43.185Z"
+   },
+   {
+    "duration": 45,
+    "start_time": "2024-07-14T15:07:11.824Z"
+   },
+   {
+    "duration": 29,
+    "start_time": "2024-07-14T15:09:02.010Z"
+   },
+   {
+    "duration": 50,
+    "start_time": "2024-07-14T15:14:53.396Z"
+   },
+   {
+    "duration": 6,
+    "start_time": "2024-07-14T15:23:20.900Z"
+   },
+   {
+    "duration": 22,
+    "start_time": "2024-07-14T15:30:21.125Z"
+   },
+   {
+    "duration": 12,
+    "start_time": "2024-07-14T15:30:33.280Z"
+   },
+   {
+    "duration": 20,
+    "start_time": "2024-07-14T15:32:40.917Z"
+   },
+   {
+    "duration": 11,
+    "start_time": "2024-07-14T15:33:22.092Z"
+   },
+   {
+    "duration": 20,
+    "start_time": "2024-07-14T15:34:33.533Z"
+   },
+   {
+    "duration": 24,
+    "start_time": "2024-07-14T16:47:49.010Z"
+   },
+   {
+    "duration": 11,
+    "start_time": "2024-07-14T16:48:48.888Z"
+   },
+   {
+    "duration": 16,
+    "start_time": "2024-07-14T16:50:02.761Z"
+   },
+   {
+    "duration": 12,
+    "start_time": "2024-07-14T16:50:22.439Z"
+   },
+   {
+    "duration": 17,
+    "start_time": "2024-07-14T16:50:35.711Z"
+   },
+   {
+    "duration": 22,
+    "start_time": "2024-07-14T16:50:48.321Z"
+   },
+   {
+    "duration": 11,
+    "start_time": "2024-07-14T16:51:10.992Z"
+   },
+   {
+    "duration": 17,
+    "start_time": "2024-07-14T16:55:58.532Z"
+   },
+   {
+    "duration": 12,
+    "start_time": "2024-07-14T16:56:29.765Z"
+   },
+   {
+    "duration": 11,
+    "start_time": "2024-07-14T16:57:09.283Z"
+   },
+   {
+    "duration": 21,
+    "start_time": "2024-07-14T16:57:51.546Z"
+   },
+   {
+    "duration": 28,
+    "start_time": "2024-07-14T17:01:07.622Z"
+   },
+   {
+    "duration": 22,
+    "start_time": "2024-07-14T17:03:40.330Z"
+   },
+   {
+    "duration": 16,
+    "start_time": "2024-07-14T17:03:57.275Z"
+   },
+   {
+    "duration": 12,
+    "start_time": "2024-07-14T17:04:11.313Z"
+   },
+   {
+    "duration": 40,
+    "start_time": "2024-07-14T17:05:01.108Z"
+   },
+   {
+    "duration": 42,
+    "start_time": "2024-07-14T17:09:01.669Z"
+   },
+   {
+    "duration": 13,
+    "start_time": "2024-07-14T17:09:59.602Z"
+   },
+   {
+    "duration": 356,
+    "start_time": "2024-07-15T11:00:36.170Z"
+   },
+   {
+    "duration": 52,
+    "start_time": "2024-07-15T11:01:17.273Z"
+   },
+   {
+    "duration": 15,
+    "start_time": "2024-07-15T11:01:31.468Z"
+   },
+   {
+    "duration": 12,
+    "start_time": "2024-07-15T11:01:52.623Z"
+   },
+   {
+    "duration": 11,
+    "start_time": "2024-07-15T11:16:10.699Z"
+   },
+   {
+    "duration": 13,
+    "start_time": "2024-07-15T11:16:38.970Z"
+   },
+   {
+    "duration": 13,
+    "start_time": "2024-07-15T11:16:51.754Z"
+   },
+   {
+    "duration": 12,
+    "start_time": "2024-07-15T11:17:25.442Z"
+   },
+   {
+    "duration": 15,
+    "start_time": "2024-07-15T11:19:18.175Z"
+   },
+   {
+    "duration": 12,
+    "start_time": "2024-07-15T11:23:21.058Z"
+   },
+   {
+    "duration": 13,
+    "start_time": "2024-07-15T11:24:26.530Z"
+   },
+   {
+    "duration": 11,
+    "start_time": "2024-07-15T11:24:39.536Z"
+   },
+   {
+    "duration": 11,
+    "start_time": "2024-07-15T11:27:55.172Z"
+   },
+   {
+    "duration": 9,
+    "start_time": "2024-07-15T15:08:49.588Z"
+   },
+   {
+    "duration": 4,
+    "start_time": "2024-07-15T15:08:55.006Z"
+   },
+   {
+    "duration": 6,
+    "start_time": "2024-07-15T15:10:04.112Z"
+   },
+   {
+    "duration": 4,
+    "start_time": "2024-07-15T15:10:09.282Z"
+   },
+   {
+    "duration": 5,
+    "start_time": "2024-07-15T15:10:11.184Z"
+   },
+   {
+    "duration": 4,
+    "start_time": "2024-07-15T15:10:13.888Z"
+   },
+   {
+    "duration": 4,
+    "start_time": "2024-07-15T15:12:24.659Z"
+   },
+   {
+    "duration": 6,
+    "start_time": "2024-07-15T15:12:26.252Z"
+   },
+   {
+    "duration": 5,
+    "start_time": "2024-07-15T15:12:39.971Z"
+   },
+   {
+    "duration": 11,
+    "start_time": "2024-07-15T15:20:50.096Z"
+   },
+   {
+    "duration": 10,
+    "start_time": "2024-07-15T15:21:06.939Z"
+   },
+   {
+    "duration": 11,
+    "start_time": "2024-07-16T09:44:44.839Z"
+   },
+   {
+    "duration": 6,
+    "start_time": "2024-07-16T09:45:55.112Z"
+   },
+   {
+    "duration": 11,
+    "start_time": "2024-07-16T09:47:33.736Z"
+   },
+   {
+    "duration": 14,
+    "start_time": "2024-07-16T09:49:09.969Z"
+   },
+   {
+    "duration": 11,
+    "start_time": "2024-07-16T09:51:06.538Z"
+   },
+   {
+    "duration": 13,
+    "start_time": "2024-07-16T09:52:35.063Z"
+   },
+   {
+    "duration": 10,
+    "start_time": "2024-07-16T09:57:14.247Z"
+   },
+   {
+    "duration": 11,
+    "start_time": "2024-07-16T09:59:01.628Z"
+   },
+   {
+    "duration": 12,
+    "start_time": "2024-07-16T09:59:17.688Z"
+   },
+   {
+    "duration": 11,
+    "start_time": "2024-07-16T10:01:33.392Z"
+   },
+   {
+    "duration": 10,
+    "start_time": "2024-07-16T10:02:37.078Z"
+   }
+  ],
+  "colab": {
+   "provenance": []
+  },
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.19"
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": true,
+   "sideBar": true,
+   "skip_h1_title": true,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {},
+   "toc_section_display": true,
+   "toc_window_display": false
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 1
+}
