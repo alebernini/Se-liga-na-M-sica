@@ -41,15 +41,12 @@ O conjunto de dados original está disponível em:
 
 - Python (Pandas)
 - Jupyter Notebook
-- Análise estatística
-- Visualização de dados (Matplotlib, Seaborn)
 
 ---
 
 ## 📊 Conclusões
 
-- Foi possível verificar diferenças no comportamento dos usuários entre as cidades ao longo da semana.
-- A análise permitiu validar (ou não) a hipótese com base em evidências.
+Na análise podemos perceber que os usuários de Springfield ouvem mais músicas que a cidade de Shelbyville, considerando o total de músicas tocadas. No entanto, há uma diferença de comportamento entre as cidades. Springfield ouve mais múiscas às sextas-feiras com um total de 16.715 tracks, seguida da segunda-feira com uma quantidade de 16.715 tracks. As cidades de Springfield e Shelbyville possuem hábitos diferentes ao relação ao volume de músicas tocadas e dia da semana, confirmando a hipótese de diferença de comportamento entre essas cidades.
 
 ---
 
